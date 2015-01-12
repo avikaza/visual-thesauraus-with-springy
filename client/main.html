@@ -1,0 +1,46 @@
+<head>
+    <title>Visual Browser</title>
+</head>
+<body>
+   <div>
+       {{>searchBox}}
+       {{>nodeDiagram}}
+   </div>
+   <div>
+       {{>results}}
+   </div>
+</body>
+
+<template name="searchBox">
+     <div class="searchDiv">
+         <input id="txtSearch" type="text"/>
+         <input id="btnSearch" type="button" value="Search"/>
+     </div>
+</template>
+
+<template name="results">
+    <div class="resultsDiv">
+        <strong>{{searchString}}</strong> Matched with the following nodes:
+        <br>
+        --->
+        <br>
+         {{#each searchMatches}}
+         {{> searchMatch}}
+         {{/each}}
+    </div>
+</template>
+
+<template name="searchMatch">
+    <div class="searchResult">{{TaxonomyName}}</div><br>
+</template>
+
+
+<template name="node">
+    <div class="node">{{TaxonomyName}}</div>
+</template>
+
+<template name="nodeDiagram">
+    <div class="nodeDiagram">
+        <canvas id="springydemo" width="1300" height="480" />
+    </div>
+</template>

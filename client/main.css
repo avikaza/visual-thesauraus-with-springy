@@ -1,0 +1,14 @@
+.endNodes {
+    float: right;
+}
+.resultsDiv {
+    height: 400px;
+    width: 200px;
+    overflow: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: blue;
+}
+.nodeDiagram {
+ float: right;
+}
